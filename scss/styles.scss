@@ -1,12 +1,18 @@
-@use "variables" as v;   //partials
-@import url(./resets);   //regular port
+@use "variables" as v; //partials
+@import url(./resets); //regular port
 
+//Mixins
+@mixin gradients ($deg: 100deg) {
+  background: linear-gradient($deg,
+      v.$color-peach,
+      v.$color-voilet);
+
+}
 
 body {
   font-family: "Teachers", sans-serif;
-  background: linear-gradient(106.5deg,
-      rgba(255, 215, 185, 0.91) 23%,
-      rgba(223, 159, 247, 0.8) 93%);
+
+  @include gradients(20deg);
 
   animation: {
     name: golgol;
@@ -23,28 +29,20 @@ body {
 
 @keyframes golgol {
   0% {
-    background: linear-gradient(20deg,
-        v.$color-peach,
-        v.$color-voilet);
+    @include gradients(20deg);
   }
 
   25% {
-    background: linear-gradient(80deg,
-        v.$color-peach,
-        v.$color-voilet);
+    @include gradients(80deg);
   }
 
   50% {
-    background: linear-gradient(120deg,
-        v.$color-peach,
-        v.$color-voilet);
+    @include gradients(120deg);
   }
 
 
   100% {
-    background: linear-gradient(160deg,
-        v.$color-peach,
-        v.$color-voilet);
+    @include gradients(160deg);
   }
 }
 
