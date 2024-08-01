@@ -1,7 +1,6 @@
-@import url(./resets);
-$color-red: rgba(228, 117, 117, 0.842);
-$color-peach: rgb(207, 207, 113);
-$color-voilet: rgb(189, 52, 194);
+@use "variables" as v;   //partials
+@import url(./resets);   //regular port
+
 
 body {
   font-family: "Teachers", sans-serif;
@@ -18,34 +17,34 @@ body {
 }
 
 ::selection {
-  background: $color-red;
+  background: v.$color-red;
   color: white;
 }
 
 @keyframes golgol {
   0% {
     background: linear-gradient(20deg,
-        rgba(255, 215, 185, 0.91) 23%,
-        rgba(223, 159, 247, 0.8) 93%);
+        v.$color-peach,
+        v.$color-voilet);
   }
 
   25% {
     background: linear-gradient(80deg,
-        $color-peach,
-        $color-voilet);
+        v.$color-peach,
+        v.$color-voilet);
   }
 
   50% {
     background: linear-gradient(120deg,
-        $color-peach,
-        $color-voilet);
+        v.$color-peach,
+        v.$color-voilet);
   }
 
 
   100% {
     background: linear-gradient(160deg,
-        $color-peach,
-        $color-voilet);
+        v.$color-peach,
+        v.$color-voilet);
   }
 }
 
