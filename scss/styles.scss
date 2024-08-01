@@ -1,9 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+@import url(./resets);
 body {
   font-family: "Teachers", sans-serif;
   background: linear-gradient(106.5deg,
@@ -14,7 +9,7 @@ body {
     name: golgol;
     duration: 5s;
     iteration-count: infinite;
-    timing-function: ease;
+    timing-fun  ction: ease;
   }
 }
 
