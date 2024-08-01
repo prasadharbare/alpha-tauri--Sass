@@ -1,4 +1,8 @@
 @import url(./resets);
+$color-red: rgba(228, 117, 117, 0.842);
+$color-peach: rgb(207, 207, 113);
+$color-voilet: rgb(189, 52, 194);
+
 body {
   font-family: "Teachers", sans-serif;
   background: linear-gradient(106.5deg,
@@ -9,12 +13,12 @@ body {
     name: golgol;
     duration: 5s;
     iteration-count: infinite;
-    timing-fun  ction: ease;
+    timing-function: ease;
   }
 }
 
 ::selection {
-  background: red;
+  background: $color-red;
   color: white;
 }
 
@@ -27,22 +31,24 @@ body {
 
   25% {
     background: linear-gradient(80deg,
-        rgba(255, 215, 185, 0.91) 23%,
-        rgba(223, 159, 247, 0.8) 93%);
+        $color-peach,
+        $color-voilet);
   }
 
   50% {
     background: linear-gradient(120deg,
-        rgba(255, 215, 185, 0.91) 23%,
-        rgba(223, 159, 247, 0.8) 93%);
+        $color-peach,
+        $color-voilet);
   }
+
 
   100% {
     background: linear-gradient(160deg,
-        rgba(255, 215, 185, 0.91) 23%,
-        rgba(223, 159, 247, 0.8) 93%);
+        $color-peach,
+        $color-voilet);
   }
 }
+
 
 .container {
   height: 100vh;
